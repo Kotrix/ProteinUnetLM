@@ -1,0 +1,7 @@
+The default reproducible run is prepared for 3 example seqeunces in the folder \data\inputs. You can upload any number of sequences as files in FASTA format into this folder, they will all be processed by ProteinUnetLM. You can put all sequences line-by-line in one .fasta file, the names are taken from the FASTA headers - not from the filenames.
+
+If you wish to calculate prediction performance metrics (SOV, AGM, Q8, F1) for sequences, you need to provide ground truth secondary structures in files with .ss8 extension. The format of the .ss8 files should be exactly the same as for .fasta files, but sequences of aminoacids should be replaced by sequences of secondary structures. See the examples in \data\inputs folder.
+
+The resulting secondary structure predictions are saved as CSV files. One for each protein in the input folder. The performance metrics are generated for all proteins with .ss8 files provided.
+
+WARNING! In CodeOcean capsule, we use ProtTrans model with FLOAT16 precision (instead of original FLOAT32). It reduces memory consumption from 12GB to 7GB while the effect in benchmarks is negligible (±0.1 percentages points in different sets, generally below standard error). However, you may wish to use FLOAT32 model to achieve the exact same results as described in the article.

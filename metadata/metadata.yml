@@ -1,0 +1,29 @@
+metadata_version: 1
+name: ProteinUnetLM - protein secondary structure prediction with Attention U-Net
+  and ProtTrans
+description: A lightweight deep network for secondary structure prediction based on
+  Attention U-Net convolutional architecture and features from protein language model
+  ProtTrans-T5-XL-U50.
+tags:
+- deep learning
+- protein secondary structure
+- protein language models
+- U-Net
+- Attention
+- ProtTrans
+authors:
+- name: Krzysztof Kotowski
+  affiliations:
+  - name: Silesian University of Technology
+- name: Piotr Fabian
+  affiliations:
+  - name: Silesian University of Technology
+- name: Irena Roterman
+  affiliations:
+  - name: Jagiellonian University, Krakow
+- name: Katarzyna Stapor
+  affiliations:
+  - name: Silesian University of Technology
+corresponding_contributor:
+  name: Katarzyna Stapor
+  email: katarzyna.stapor@polsl.pl

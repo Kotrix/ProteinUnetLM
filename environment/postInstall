@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+rm -rf /opt/conda/lib/python3.8/site-packages/ruamel*
+pip3 install bio-embeddings[transformers]==0.2.2
