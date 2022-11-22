@@ -10,6 +10,8 @@ from tensorflow.keras.models import model_from_json
 from data_loading import SS_LIST, UPPER_LENGTH_LIMIT, FASTA_RESIDUE_LIST, read_input_folder, standardize_data, fill_with_zeros
 from architecture import unet_classifier
 from custom_metrics import generate_summary
+from visualization import plot_features
+
 
 input_folder = "../data/inputs"
 models_folder = "../data/models"
@@ -54,6 +56,8 @@ def save_prediction_to_csv(one_hot: np.array, pred_c: np.array, true_c: np.array
         true_ss8 = [t for t in true_c]
         output_df["true_SS8"] = true_ss8
         generate_summary(protein_name, true_ss8, pred_ss8)
+
+    plot_features(output_df, protein_name, protein_name)
 
     output_df.to_csv(os.path.join(output_folder, protein_name + ".csv"), index=False)
 
